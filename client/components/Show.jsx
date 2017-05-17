@@ -8,12 +8,12 @@ const Show = ({match}) => {
   var rank = match.params.rankName
   var data = ranks[rank]
 
-console.log(rank);
 
     return (
       <div className="show">
         <h2>{name}</h2>
         <h4>{findName(data, name).description}</h4>
+        <h5><Link to={`${match.url}/species`}>Show species</Link></h5>
       </div>
     )
   }
