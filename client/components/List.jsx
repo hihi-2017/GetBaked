@@ -7,15 +7,12 @@ const List = props => {
   var rankName = props.match.params.rankName
   var data = ranks[rankName]
 
-  console.log(rankName);
-  console.log(data);
-
   return (
     <div className="list">
       <h2>{rankName}</h2>
       <ul>
         {data.map((item) => {
-            return <li>{item.name}</li>
+            return <li><Link to={'/list/'+rankName + '/' + item.name}>{item.name}</Link></li>
         })}
       </ul>
     </div>
