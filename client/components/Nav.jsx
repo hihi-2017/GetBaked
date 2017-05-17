@@ -1,14 +1,15 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import Ranks from '../../data/ranks'
+
+import ranks from '../../data/ranks'
 
 
 const Nav = () => {
   return (
     <div className="nav">
-      <h2> Ranks </h2>
+      <h2> Categories </h2>
       <ul>
-        {Object.keys(Ranks).map((rankName) => {
+        {Object.keys(ranks).map((rankName) => {
           return <li><Link to ={'/list/'+rankName}>{rankName}</Link></li>
         })}
       </ul>
