@@ -7,7 +7,7 @@ const App = () => {
   return (
     <Router>
       <div>
-        <h1>Navigating the Taxonomic Ranks</h1>
+        <h1 className = "title-header">Navigating the Taxonomic Ranks</h1>
         <div className="container">
           <Nav />
         </div>

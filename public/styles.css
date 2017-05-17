@@ -1,7 +1,25 @@
+.body {
+
+}
+
 .container {
   display: flex;
+  width: 80%;
+}
+
+.title-header {
+  text-align: center;
+  
 }
 
 .nav {
-  
+  width: 20%;
+  text-align: center;
+}
+
+.nav h2 {
+}
+
+.nav ul li {
+  list-style: none;
 }
