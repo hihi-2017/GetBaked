@@ -9,7 +9,7 @@ const Nav = () => {
       <h2> Nav </h2>
       <ul>
         {Object.keys(Ranks).map((rankName) => {
-          return <li>{rankName}</li>
+          return <li><Link to ={'/list/'+rankName}>{rankName}</Link></li>
         })}
       </ul>
     </div>
