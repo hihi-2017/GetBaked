@@ -17,8 +17,8 @@ const renderCategories = (categories) => {
 
 const renderCategory = (category) => {
   return (
-    <div className = "col-md-4">
-       <h3 className="cat-header"><Link to={`/${category.category_name}`}>{category.category_name}</Link></h3>
+    <div className = "col-md-4 category_box">
+       <h4 className="cat-header"><Link to={`/${category.category_name}`}>{category.category_name}</Link></h4>
        <img className = "cat-image" src={category.image_url}/>
     </div>
  )

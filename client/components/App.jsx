@@ -9,10 +9,10 @@ const App = () => {
     <Router>
       <div>
         <h1 className="title-header">Get Baked</h1>
-        <h3 className="title-byline"> Wellington Edition </h3>
+        <h5 className="title-byline"> Wellington Edition </h5>
         <div className="container">
            <Route exact path="/" component={Home} />
-           <Route path='/:category_name' component={Category} />
+           <Route exact path='/:category_name' component={Category} />
         </div>
       </div>
     </Router>
