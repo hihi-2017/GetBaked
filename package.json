@@ -1,8 +1,8 @@
 {
-  "name": "taxonomic-routing",
+  "name": "Get-Baked",
   "version": "0.1.0",
-  "description": "Using React Router to navigate the taxonomic rank",
-  "repository": "https://github.com/dev-academy-challenges/taxonomic-routing.git",
+  "description": "Sharing Recipes and Favourite Sweet Spots",
+  "repository": "https://github.com/sarah-due/GetBaked.git",
   "main": "server/index.js",
   "scripts": {
     "start": "nodemon --watch server server/index & webpack --watch",
@@ -15,7 +15,7 @@
       "react"
     ]
   },
-  "author": "EDA",
+  "author": "SDue",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.21.0",

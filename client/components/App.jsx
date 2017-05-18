@@ -1,19 +1,16 @@
 import React from 'react'
 import {HashRouter as Router, Route} from 'react-router-dom'
-import Nav from "./Nav"
-import List from "./List"
-import Show from "./Show"
 
+import Home from "./Home"
 
 const App = () => {
   return (
     <Router>
       <div>
-        <h1 className = "title-header">Navigating the Taxonomic Ranks</h1>
+        <h1 className = "title-header">Get Baked</h1>
+        <h3 className="title-byline"> Wellington Edition </h3>
         <div className="container">
-          <Nav />
-          <Route exact={true} path='/list/:rankName' component = {List}/>
-          <Route path = '/list/:rankName/:name' component={Show} />
+           <Home/>
         </div>
       </div>
     </Router>
