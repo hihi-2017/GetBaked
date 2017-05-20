@@ -12,11 +12,12 @@ const Recipe_List = ({match}) => {
 
   return (
     <div className='recipe-list'>
-      <h2>Recipes</h2>
+      <h2 className = 'recipe-list-header'>{category_name}</h2>
+        <hr/>
         {matches.map((item, key) => {
           return (
             <div className = 'col-md-3'>
-              <h3 className = 'recipe-list-title'>{item.recipe_name}</h3>
+              <h3 className = 'recipe-list-title'><Link to={`/${item.recipe_name}`}>{item.recipe_name}</Link></h3>
               <img className="recipe-list-image" src={item.recipe_image_url} />
             </div>
           )

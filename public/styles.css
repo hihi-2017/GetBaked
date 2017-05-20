@@ -79,8 +79,19 @@ margin-top: 25px;
   text-align: center;
 }
 
-.recipe-list-title {
+.recipe-list-header {
+  padding: 5px 0px;
+  font-family: "Lato", "sans-serif";
+  letter-spacing: 1px;
+  font-size: 2em;
+  font-weight: bold;
+}
 
+.recipe-list-title {
+  padding: 5px 0px;
+  font-family: "Lato", "sans-serif";
+  letter-spacing: 1px;
+  font-size: 1.2em;
 }
 
 .recipe-list-image {
