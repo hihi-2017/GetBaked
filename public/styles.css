@@ -70,3 +70,20 @@ margin-top: 25px;
   padding: 10px 0px;
   margin: 0px;
 }
+
+
+
+/* Category List Page */
+
+.recipe-list {
+  text-align: center;
+}
+
+.recipe-list-header {
+
+}
+
+.recipe-list-image {
+  height: 12em;
+  width: 15em;
+}

@@ -2,7 +2,7 @@ import React from 'react'
 import {HashRouter as Router, Route} from 'react-router-dom'
 
 import Home from "./Home"
-import Category from "./Category"
+import Recipe_List from "./Recipe_List"
 
 const App = () => {
   return (
@@ -12,7 +12,7 @@ const App = () => {
         <hr/>
         <div className="container">
            <Route exact path="/" component={Home} />
-           <Route exact path='/:category_name' component={Category} />
+           <Route exact path='/:category_name' component={Recipe_List} />
         </div>
         <hr/>
         <h5 className ="footer"> Copyright &copy; Dueweke Codes {'2017'} </h5>
