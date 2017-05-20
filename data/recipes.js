@@ -1,7 +1,7 @@
-const recipes = {
+const recipes = [
 
-Cakes and Tortes : [
-    { recipe_id: 99901,
+    { category_name: 'Cakes and Tortes',
+      recipe_id: 99901,
       category_id: 2201,
       recipe_name: 'Chocolate Layer Cake',
       chef_name: 'Ina Garten aka The Barefoot Contessa',
@@ -11,7 +11,5 @@ Cakes and Tortes : [
       recipe_comments: "Don't even think about disgracing Ina by using average vanilla or cocoa in this recipe."
     }
   ]
-
-}
 
 export default recipes

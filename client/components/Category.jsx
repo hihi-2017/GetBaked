@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-// import recipes from "../../data/recipes"
+ import recipes from "../../data/recipes"
 
 
 const Category = () => {

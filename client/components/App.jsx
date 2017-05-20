@@ -7,13 +7,15 @@ import Category from "./Category"
 const App = () => {
   return (
     <Router>
-      <div>
-        <h1 className="title-header">Get Baked</h1>
-        <h5 className="title-byline"> Wellington Edition </h5>
+      <div className = "main-body">
+        <h1 className="title-header">get baked</h1>
+        <hr/>
         <div className="container">
            <Route exact path="/" component={Home} />
            <Route exact path='/:category_name' component={Category} />
         </div>
+        <hr/>
+        <h5 className ="footer"> Copyright &copy; Dueweke Codes {'2017'} </h5>
       </div>
     </Router>
   )
