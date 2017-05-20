@@ -17,9 +17,9 @@ const Show_Recipe = ({match}) => {
         {matches.find((recipe) => {
           return (
             <div className = 'row'>
+              <img className="recipe-image" src={recipe.recipe_image_url} />
               <h3 className = 'recipe-title'>{recipe.recipe_name}</h3>
               <h4 className = 'recipe-chef'>{recipe.recipe_chef}</h4>
-              <img className="recipe-image" src={recipe.recipe_image_url} />
             </div>
           )
         })}

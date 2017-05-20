@@ -13,12 +13,20 @@ body {
 .title-header {
   text-align: center;
   background-color: #E6BEAE;
-  color: #fff;
   font-family: "Bitter", "serif";
   font-weight: bold;
   font-size: 4.5em;
   padding: 30px 0px;
   margin: 0px;
+}
+.title-header a {
+  text-decoration: none;
+  color: #fff;
+  text-shadow: 3px 3px #6e4231;
+}
+.title-header a:hover {
+  color: #fff;
+  text-decoration: none;
 }
 
 
@@ -43,6 +51,7 @@ margin-top: 25px;
   letter-spacing: 1px;
   font-size: 1.3em;
   background-color: #6e4231;
+  opacity: 0.7;
 }
 
 .cat-header a {
