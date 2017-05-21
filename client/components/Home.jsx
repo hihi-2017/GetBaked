@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div className="row category_list">
       <div className="home-banner row">
-        <h3>Welcome to get baked!</h3>
+        <h3 className="banner-content">This week's favourite recipe...</h3>
       </div>
       {renderCategories(categories)}
     </div>

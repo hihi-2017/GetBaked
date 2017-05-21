@@ -29,7 +29,28 @@ body {
   text-decoration: none;
 }
 
+.home-banner {
+  background-image: url("http://www.harrietharcourt.com/wp-content/uploads/2017/03/Ginger-Peaches-2706.jpg");
+  background-size: cover;
+  background-position: bottom center;
+  border: none;
+  margin: auto;
+  height: 35em;
+  width: 100%;
+}
 
+.banner-content {
+  font-family: "Bitter", "serif";
+  font-size: 3em;
+  text-align: center;
+  border: 0.1em solid #FFF;
+  color: #FFF;
+  padding: 1em 0.3em;
+  position: absolute;
+  margin-top: 2.5em;
+  left: 15%;
+  width: 70%;
+}
 /* Home Page */
 
 .container {

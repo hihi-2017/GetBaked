@@ -6,20 +6,19 @@ import recipes from "../../data/recipes"
 
 const Show_Recipe = ({match}) => {
   const {recipe_id} = match.params
-  const matches = recipes.filter(recipe => {
+  const recipe_match = recipes.filter(recipe => {
     return recipe.recipe_id === recipe_id
   })
 
   return (
-    <div className='recipe-list'>
-      <h2 className = 'recipe-list-header'>{category_name}</h2>
-        <hr/>
-        {matches.find((recipe) => {
+    <div className='container'>
+      <h2>Hello</h2>
+        {recipe_match.map((item, key) => {
           return (
-            <div className = 'row'>
-              <img className="recipe-image" src={recipe.recipe_image_url} />
-              <h3 className = 'recipe-title'>{recipe.recipe_name}</h3>
-              <h4 className = 'recipe-chef'>{recipe.recipe_chef}</h4>
+            <div>
+              <img className="recipe-image" src={item.recipe_image_url} />
+              <h3 className = 'recipe-title'>{item.recipe_name}</h3>
+              <h4 className = 'recipe-chef'>{item.recipe_chef}</h4>
             </div>
           )
         })}
