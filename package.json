@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "Sharing Recipes and Favourite Sweet Spots",
   "repository": "https://github.com/sarah-due/GetBaked.git",
+  "engines": {
+    "node": "6.10.2"
+  },
   "main": "server/index.js",
   "scripts": {
     "start": "nodemon --watch server server/index & webpack --watch",
