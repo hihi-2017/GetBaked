@@ -10,6 +10,9 @@ const Home = () => {
       <div className="home-banner row">
         <h3 className="banner-content">This week's favourite recipe...</h3>
       </div>
+      <div>
+        <h4 className="category-list-header">Recipe Categories</h4>
+      </div>
       {renderCategories(categories)}
     </div>
 )}
