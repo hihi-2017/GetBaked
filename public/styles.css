@@ -16,7 +16,8 @@ body {
   font-family: "Bitter", "serif";
   font-weight: bold;
   font-size: 4.5em;
-  padding: 30px 0px;
+  padding-top: 40px;
+  padding-bottom: 50px;
   margin: 0px;
 }
 .title-header a {
@@ -27,6 +28,28 @@ body {
 .title-header a:hover {
   color: #fff;
   text-decoration: none;
+}
+
+.navbar {
+  background-color: gray;
+  display: flex;
+}
+.navbar a {
+  flex-grow: 1;
+  text-decoration: none;
+  color: #fff;
+  font-family: "Lato", "sans-serif";
+  letter-spacing: 1px;
+  font-size: 1.1em;
+  text-align:center;
+  padding: 10px;
+  border:2px solid white;
+}
+
+.navbar a:hover {
+  text-decoration: none;
+  color: #E6BEAE;
+  cursor: pointer;
 }
 
 .home-banner {

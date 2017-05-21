@@ -3,6 +3,7 @@ import {HashRouter as Router, Route} from 'react-router-dom'
 import {Link} from 'react-router-dom'
 
 import Home from "./Home"
+import Nav from "./Nav"
 import Recipe_List from "./Recipe_List"
 import Show_Recipe from './Show_Recipe'
 
@@ -11,7 +12,7 @@ const App = () => {
     <Router>
       <div className = "main-body">
         <h1 className="title-header"><Link to={"/"}>get baked</Link></h1>
-        <hr/>
+        <Nav />
         <div className="container">
            <Route exact path="/" component={Home} />
            <Route exact path='/:category_name' component={Recipe_List} />
