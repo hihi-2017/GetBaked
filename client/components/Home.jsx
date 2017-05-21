@@ -8,10 +8,11 @@ import categories from "../../data/categories"
 const Home = () => {
   return (
     <div className="row category_list">
-      <div className="home-banner row">
+      <div className="home-banner col-md-12">
         <h3 className="banner-content">RECIPE OF THE WEEK</h3>
       </div>
       <BakeOrNot />
+      <hr className= "new-hr"/>
       <div>
         <h4 className="category-list-header">Recipe Categories</h4>
       </div>

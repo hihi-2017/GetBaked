@@ -7,12 +7,18 @@ body {
   background-color: #eee;
 }
 
+.new-hr{
+  border: 0.5px solid #afb1b5;
+  margin: 6em 0em;
+}
+
 
 /* Header */
 
+
 .title-header {
   text-align: center;
-  background-color: #E6BEAE;
+  background-color: #EBB8B4;
   font-family: "Bitter", "serif";
   font-weight: bold;
   font-size: 4.8em;
@@ -23,7 +29,7 @@ body {
 .title-header a {
   text-decoration: none;
   color: #fff;
-  text-shadow: 3px 3px #6e4231;
+  text-shadow: 3px 3px #a67e6c;
 }
 .title-header a:hover {
   color: #fff;
@@ -31,7 +37,8 @@ body {
 }
 
 .navbar {
-  background-color: gray;
+  background-color: #6e4231;
+  opacity: 0.7;
   display: flex;
 }
 .navbar a {
@@ -83,8 +90,8 @@ body {
 
 }
 
-.to-bake {
-  background-image: 'http://restoransprovansa.lv/wp-content/uploads/2017/03/provansa-2.jpg';
+.to-bake, .not-to-bake {
+  background-color: #434b5b;
   text-align: center;
   font-family: "Bitter", "serif";
   font-size: 3em;
@@ -92,16 +99,11 @@ body {
   border: 0.1em solid #FFF;
   color: #FFF;
   padding: 1em 0.3em;
+  margin-top: 1.2em;
 }
 
-.not-to-bake {
-  text-align: center;
-  font-family: "Bitter", "serif";
-  font-size: 3em;
-  text-align: center;
-  border: 0.1em solid #FFF;
-  color: #FFF;
-  padding: 1em 0.3em;
+.underline {
+  text-decoration: underline;
 }
 
 .category-list-header {
