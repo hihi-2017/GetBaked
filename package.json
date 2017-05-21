@@ -4,7 +4,8 @@
   "description": "Sharing Recipes and Favourite Sweet Spots",
   "repository": "https://github.com/sarah-due/GetBaked.git",
   "engines": {
-    "node": "6.10.2"
+    "node": "6.10.2",
+    "npm": "3.10.10",
   },
   "main": "server/index.js",
   "scripts": {
