@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
+import BakeOrNot from "./BakeOrNot"
 import categories from "../../data/categories"
 
 
@@ -8,8 +9,9 @@ const Home = () => {
   return (
     <div className="row category_list">
       <div className="home-banner row">
-        <h3 className="banner-content">This week's favourite recipe...</h3>
+        <h3 className="banner-content">RECIPE OF THE WEEK</h3>
       </div>
+      <BakeOrNot />
       <div>
         <h4 className="category-list-header">Recipe Categories</h4>
       </div>

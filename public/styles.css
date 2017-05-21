@@ -15,7 +15,7 @@ body {
   background-color: #E6BEAE;
   font-family: "Bitter", "serif";
   font-weight: bold;
-  font-size: 4.5em;
+  font-size: 4.8em;
   padding-top: 40px;
   padding-bottom: 50px;
   margin: 0px;
@@ -72,7 +72,7 @@ body {
   color: #FFF;
   padding: 1em 0.3em;
   position: absolute;
-  margin-top: 2.5em;
+  margin-top: 3em;
   left: 15%;
   width: 70%;
 }
@@ -80,6 +80,28 @@ body {
 
 .container {
   background-color: #eee;
+
+}
+
+.to-bake {
+  background-image: 'http://restoransprovansa.lv/wp-content/uploads/2017/03/provansa-2.jpg';
+  text-align: center;
+  font-family: "Bitter", "serif";
+  font-size: 3em;
+  text-align: center;
+  border: 0.1em solid #FFF;
+  color: #FFF;
+  padding: 1em 0.3em;
+}
+
+.not-to-bake {
+  text-align: center;
+  font-family: "Bitter", "serif";
+  font-size: 3em;
+  text-align: center;
+  border: 0.1em solid #FFF;
+  color: #FFF;
+  padding: 1em 0.3em;
 }
 
 .category-list-header {
