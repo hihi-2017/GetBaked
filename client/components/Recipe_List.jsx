@@ -9,7 +9,7 @@ const Recipe_List = ({match}) => {
   const matches = recipes.filter(recipe => {
     return recipe.category_name === category_name
   })
-
+  
   return (
     <div className='recipe-list'>
       <h2 className = 'recipe-list-header'>{category_name}</h2>

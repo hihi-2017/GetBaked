@@ -13,7 +13,7 @@ body {
 }
 
 
-/* Header */
+/***** Header *****/
 
 
 .title-header {
@@ -83,7 +83,7 @@ body {
   left: 15%;
   width: 70%;
 }
-/* Home Page */
+/***** Home Page *****/
 
 .container {
   background-color: #eee;
@@ -108,7 +108,6 @@ body {
 
 .category-list-header {
   padding: 20px 0px;
-  padding-top: 40px;
   text-align: center;
   font-family: "Lato", "sans-serif";
   letter-spacing: 1px;
@@ -153,7 +152,7 @@ margin-top: 25px;
 
 .footer {
   text-align: center;
-  background-color: #E6BEAE;
+  background-color: #EBB8B4;
   font-size: 1em;
   color: #fff;
   font-family: "Bitter", "serif";
@@ -163,7 +162,7 @@ margin-top: 25px;
 
 
 
-/* Category List Page */
+/***** Recipe List Page *****/
 
 .recipe-list {
   text-align: center;
@@ -172,7 +171,7 @@ margin-top: 25px;
 .recipe-list-header {
   padding: 5px 0px;
   font-family: "Lato", "sans-serif";
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   font-size: 2em;
   font-weight: bold;
 }
@@ -180,11 +179,26 @@ margin-top: 25px;
 .recipe-list-title {
   padding: 5px 0px;
   font-family: "Lato", "sans-serif";
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   font-size: 1.2em;
 }
 
 .recipe-list-image {
   height: 12em;
   width: 15em;
+}
+
+
+/***** View Recipe Page *****/
+
+.recipe-title {
+
+}
+
+.recipe-chef {
+  
+}
+
+.recipe-image {
+
 }
