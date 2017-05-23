@@ -3,6 +3,10 @@ body {
   padding: 0px;
 }
 
+a, a:link, a:visited, a:after {
+  text-decoration: none !important;
+}
+
 .main-body {
   background-color: #eee;
 }
@@ -36,6 +40,11 @@ body {
   text-decoration: none;
 }
 
+.title-header a:visited, a:after, a:active {
+  color: #fff;
+  text-decoration: none;
+}
+
 .navbar {
   background-color: #6e4231;
   opacity: 0.7;
@@ -59,6 +68,11 @@ body {
   color: #eee;
   cursor: pointer;
   opacity: 0.5;
+}
+
+.navbar a:visited, a:after, a:active, {
+  color: #fff;
+  text-decoration: none;
 }
 
 .home-banner {
@@ -196,7 +210,7 @@ margin-top: 25px;
 }
 
 .recipe-chef {
-  
+
 }
 
 .recipe-image {
