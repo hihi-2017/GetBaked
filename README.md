@@ -1,4 +1,4 @@
-** #Personal Goals: **
+* Personal Goals: *
 
 - To be able to start with a small, functional app that I can expand and make more interactive as we learn more advanced coding throughout the course.
 
@@ -13,7 +13,7 @@
 - Learn how to make a search bar to navigate the website.
 
 
-** #User Stories: **
+* User Stories: *
 
 - I can browse recipes by category.
 

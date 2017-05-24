@@ -11,7 +11,7 @@ const App = () => {
   return (
     <Router>
       <div className = "main-body">
-        <h1 className="title-header"><Link to={"/"}>get baked</Link></h1>
+        <h1 className="title-header"><Link to='/' >get baked</Link></h1>
         <Nav />
         <div className="container">
            <Route exact path="/" component={Home} />
