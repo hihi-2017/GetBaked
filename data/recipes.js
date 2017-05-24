@@ -1,7 +1,7 @@
 const recipes = [
 
-    { category_name: 'Cakes and Tortes',
-      recipe_id: 99901,
+    { recipe_id: 99901,
+      category_name: 'Cakes and Tortes',
       category_id: 2201,
       recipe_name: 'Chocolate Layer Cake',
       chef_name: 'Ina Garten aka The Barefoot Contessa',
@@ -11,8 +11,8 @@ const recipes = [
       recipe_comments: "Don't even think about disgracing Ina by using average vanilla or cocoa in this recipe."
     },
 
-    { category_name: 'Bread',
-      recipe_id: 99902,
+    { recipe_id: 99902,
+      category_name: 'Bread',
       category_id: 2202,
       recipe_name: 'Bread',
       chef_name: "Dr. Bread",
@@ -21,8 +21,8 @@ const recipes = [
       recipe_method: "Make bread",
       recipe_comments: "it's bread"
     },
-    { category_name: 'Pies, Crumbles, and Tarts',
-      recipe_id: 99903,
+    { recipe_id: 99903,
+      category_name: 'Pies, Crumbles, and Tarts',
       category_id: 2202,
       recipe_name: 'Raspberry Pie',
       chef_name: "Mrs. Pie Lady",
@@ -31,8 +31,8 @@ const recipes = [
       recipe_method: "Make pie",
       recipe_comments: "it's pie"
     },
-    { category_name: 'Cookies and Bars',
-      recipe_id: 99904,
+    { recipe_id: 99904,
+      category_name: 'Cookies and Bars',
       category_id: 2202,
       recipe_name: 'Cookies',
       chef_name: "Mr.Cookerson",
@@ -41,8 +41,8 @@ const recipes = [
       recipe_method: "Make cookies",
       recipe_comments: "it's cookies"
     },
-    { category_name: 'Custard, Mousse, and Pudding',
-      recipe_id: 99905,
+    { recipe_id: 99905,
+      category_name: 'Custard, Mousse, and Pudding',
       category_id: 2202,
       recipe_name: 'Chocolate Mousse',
       chef_name: "Bullwinkle",
@@ -51,8 +51,8 @@ const recipes = [
       recipe_method: "Make the mousse",
       recipe_comments: "it's moussey"
     },
-    { category_name: 'Candy and Confectioneries',
-      recipe_id: 99906,
+    { recipe_id: 99906,
+      category_name: 'Candy and Confectioneries',
       category_id: 2202,
       recipe_name: 'Candy',
       chef_name: "Willy Wonka",
@@ -61,8 +61,8 @@ const recipes = [
       recipe_method: "Make candy",
       recipe_comments: "it's candy"
     },
-    { category_name: 'Muffins and Breakfast Pastries',
-      recipe_id: 99907,
+    { recipe_id: 99907,
+      category_name: 'Muffins and Breakfast Pastries',
       category_id: 2202,
       recipe_name: 'Breakfast Pastry',
       chef_name: "Patty Pastry",
@@ -71,8 +71,8 @@ const recipes = [
       recipe_method: "Make pastry",
       recipe_comments: "it's pastry"
     },
-    { category_name: 'Ice Cream and Frozen Desserts',
-      recipe_id: 99908,
+    { recipe_id: 99908,
+      category_name: 'Ice Cream and Frozen Desserts',
       category_id: 2202,
       recipe_name: 'Ice Cream',
       chef_name: "Ben and or Jerry",
@@ -81,8 +81,8 @@ const recipes = [
       recipe_method: "Make ice cream",
       recipe_comments: "it's creamy"
     },
-    { category_name: 'Frosting, Glazes, and Sauces',
-      recipe_id: 99909,
+    { recipe_id: 99909,
+      category_name: 'Frosting, Glazes, and Sauces',
       category_id: 2202,
       recipe_name: 'Chocolate Sauce',
       chef_name: "Saucy McSaucerson",
@@ -91,8 +91,8 @@ const recipes = [
       recipe_method: "Make sauce",
       recipe_comments: "it's saucy"
     },
-    { category_name: 'Ice Cream and Frozen Desserts',
-      recipe_id: 99910,
+    { recipe_id: 99910,
+      category_name: 'Ice Cream and Frozen Desserts',
       category_id: 2202,
       recipe_name: 'Ice Cream Sandwiches',
       chef_name: "Ice Cream Man",
