@@ -8,4 +8,12 @@ router.get('/', (req, res) => {
     })
 })
 
+router.get('/recipes', (req, res) => {
+  req.app.get('knex')('recipes')
+    .then((result) => {
+      console.log(result);
+      res.json(result)
+    })
+})
+
 module.exports = router

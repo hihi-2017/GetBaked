@@ -10,12 +10,24 @@ setupDb(test, function (db) {
 })
 
 
-test.serial('GET /categories return a list of categories', t => {
+test.serial('GET /categories returns a list of categories', t => {
   return request(app)
     .get('/categories')
     .expect(200)
     .then((res) => {
       t.is(res.body.length, 9)
+    })
+    .catch((err) => {
+      console.log(err.message)
+    })
+})
+
+test.serial("GET /recipes returns a list of recipes", t => {
+  return request(app)
+    .get('/categories/recipes')
+    .expect(200)
+    .then((res) => {
+      t.is(res.body.length, 3)
     })
     .catch((err) => {
       console.log(err.message)
