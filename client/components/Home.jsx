@@ -19,7 +19,7 @@ export default class Home extends React.Component {
   getCategoryList() {
     api.getCategories((error, categories) => {
       if(error) {
-        console.log(error);
+        console.log(error)
       } else {
         this.setState({categories})
       }
