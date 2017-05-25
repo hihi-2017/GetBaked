@@ -10,7 +10,7 @@ function getCategories(callback) {
   request
     .get('/categories')
     .end((err, res) => {
-      callback(res.body)
+      callback(null, res.body)
     })
   }
 
