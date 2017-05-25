@@ -11392,9 +11392,8 @@ var Home = function (_React$Component) {
         if (error) {
           console.log(error);
         } else {
-          console.log(categories);
+          _this2.setState({ categories: categories });
         }
-        _this2.setState({ categories: categories });
       });
     }
   }, {
@@ -11473,7 +11472,7 @@ var Nav = function Nav() {
         { className: 'navbar' },
         _react2.default.createElement(
             _reactRouterDom.Link,
-            { to: './' },
+            { to: '/' },
             'Home'
         ),
         _react2.default.createElement(

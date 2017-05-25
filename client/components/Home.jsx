@@ -21,9 +21,8 @@ export default class Home extends React.Component {
       if(error) {
         console.log(error);
       } else {
-        console.log(categories);
+        this.setState({categories})
       }
-      this.setState({categories})
     })
   }
 
