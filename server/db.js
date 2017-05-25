@@ -19,5 +19,5 @@ function getCategory(id, connection) {
 }
 
 function getRecipe(recipe_id, connection) {
-  return connection('recipes').where('recipe_id', recipe_id)
+  return connection('recipes').where('recipe_id', recipe_id).first()
 }

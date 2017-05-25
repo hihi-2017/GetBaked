@@ -46,9 +46,9 @@ test.serial('GET /categories/:category_id return category by id', t => {
     })
 })
 
-test.todo("GET /recipes/:recipe_id"), t => {
+test.serial('GET /recipes/:recipe_id', t => {
   return request(app)
-    .get('/recipes/1')
+    .get('/categories/recipes/1')
     .expect(200)
     .then((res)=> {
       t.is(res.body.recipe_id, 1)
@@ -56,4 +56,4 @@ test.todo("GET /recipes/:recipe_id"), t => {
     .catch((err) => {
       console.log(err.message);
     })
-}
+})

@@ -20,11 +20,20 @@ router.get('/recipes', (req, res) => {
 
 router.get('/:id', (req, res) => {
   db.getCategory(req.params.id, req.app.get('knex'))
-    .then((result)=> {
-      console.log(result)
+    .then((result) => {
       res.status(200).json(result)
     })
     .catch(function(err){
+      res.status(500).send('DATABASE ERROR ' + err.message)
+    })
+})
+
+router.get('/recipes/:recipe_id', (req, res) => {
+  db.getRecipe(req.params.recipe_id, req.app.get('knex'))
+    .then((result) => {
+      res.json(result)
+    })
+    .catch(function(err) {
       res.status(500).send('DATABASE ERROR ' + err.message)
     })
 })
