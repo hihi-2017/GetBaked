@@ -6,14 +6,16 @@ module.exports = {
     client: 'sqlite3',
     connection: {
       filename: './dev.sqlite3'
-    }
+    },
+    useNullAsDefault: true,
   },
 
   test: {
     client: 'sqlite3',
     connection: {
       filename: ':memory:'
-    }
+    },
+    useNullAsDefault: true,
   },
 
   staging: {
@@ -23,6 +25,7 @@ module.exports = {
       user:     'username',
       password: 'password'
     },
+
     pool: {
       min: 2,
       max: 10
