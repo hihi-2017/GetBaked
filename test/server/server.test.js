@@ -34,4 +34,26 @@ test.serial("GET /recipes returns a list of recipes", t => {
     })
 })
 
-test.todo('GET /categories/:id returns all recipes in one category')
+test.serial('GET /categories/:category_id return category by id', t => {
+  return request(app)
+    .get('/categories/2201')
+    .expect(200)
+    .then((res) => {
+      t.is(res.body.id, 2201)
+    })
+    .catch((err) => {
+      console.log(err.message)
+    })
+})
+
+test.todo("GET /recipes/:recipe_id"), t => {
+  return request(app)
+    .get('/recipes/1')
+    .expect(200)
+    .then((res)=> {
+      t.is(res.body.recipe_id, 1)
+    })
+    .catch((err) => {
+      console.log(err.message);
+    })
+}
