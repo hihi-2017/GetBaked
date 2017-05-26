@@ -11457,19 +11457,11 @@ var Recipe_List = function (_React$Component) {
         }
       });
     }
-
-    // This is all wrong... but can't figure out where to filter the recipes......
-    //
-    // const filterRecipes = () => {
-    //   return this.state.recipes.filter(recipe => {
-    //     return recipe.category_name === this.state.category_name
-    //   })
-    // }
-
   }, {
     key: 'render',
     value: function render() {
-      console.log(this.state);
+      var _this3 = this;
+
       return _react2.default.createElement(
         'div',
         { className: 'recipe-list' },
@@ -11479,7 +11471,9 @@ var Recipe_List = function (_React$Component) {
           this.state.category_name
         ),
         _react2.default.createElement('hr', null),
-        this.state.recipes.map(function (item, key) {
+        this.state.recipes.filter(function (recipe) {
+          return recipe.category_name === _this3.state.category_name;
+        }).map(function (item, key) {
           return _react2.default.createElement(
             'div',
             { className: 'col-md-3' },
