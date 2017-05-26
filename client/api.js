@@ -18,6 +18,6 @@ function getRecipes(callback) {
   request
     .get('/categories/recipes')
     .end((err, res) => {
-      callback(res.body)
+      callback(null, res.body)
     })
 }
