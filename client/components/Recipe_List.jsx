@@ -29,6 +29,13 @@ export default class Recipe_List extends React.Component {
     })
   }
 
+  // This is all wrong... but can't figure out where to filter the recipes......
+  //
+  // const filterRecipes = () => {
+  //   return this.state.recipes.filter(recipe => {
+  //     return recipe.category_name === this.state.category_name
+  //   })
+  // }
 
   render() {
     console.log(this.state)
