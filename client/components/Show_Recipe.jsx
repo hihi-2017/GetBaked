@@ -7,7 +7,7 @@ import * as api from '../api'
 export default class Show_Recipe extends React.Component {
   constructor(props){
     super(props)
-
+    console.log(props);
     this.state = {
       recipe_id: props.match.params.recipe_id,
       recipes: []
@@ -37,22 +37,24 @@ export default class Show_Recipe extends React.Component {
               return recipe.recipe_id === Number(this.state.recipe_id)
               }).map((item, key) => {
               return (
-                <div>
+                <div className="recipe-box">
                   <h2 className = 'recipe-title'>{item.recipe_name}</h2>
                   <img className ="recipe-image" src={item.recipe_image_url} />
-                  <h4 className = 'recipe-chef'>By: {item.chef_name}</h4>
-                  <h5>Ingredients:</h5>
-                  <p>
-                    {item.recipe_ingredients}
-                  </p>
-                  <h5>Method:</h5>
-                  <p>
-                    {item.recipe_method}
-                  </p>
-                  <h5>Comments:</h5>
-                  <p>
-                    {item.recipe_comments}
-                  </p>
+                  <h3 className = 'recipe-chef'>By: {item.chef_name}</h3>
+                  <div className="method-box">
+                    <h4>Ingredients:</h4>
+                      <p className = "recipe-text">
+                        {item.recipe_ingredients}
+                      </p>
+                    <h4>Method:</h4>
+                      <p className = "recipe-text">
+                        {item.recipe_method}
+                      </p>
+                    <h4>Comments:</h4>
+                      <p className = "recipe-text">
+                        {item.recipe_comments}
+                      </p>
+                    </div>
                 </div>
               )
             })}

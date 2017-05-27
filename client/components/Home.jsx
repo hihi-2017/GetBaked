@@ -31,17 +31,19 @@ export default class Home extends React.Component {
       return (
         <div className="row category_list">
           <div className="home-banner col-md-12">
-            <h3 className="banner-content">RECIPE OF THE WEEK</h3>
+            <Link to='/Cakes%20and%20Tortes/1'>
+              <h3 className="banner-content">RECIPE OF THE WEEK</h3>
+            </Link>
           </div>
           <BakeOrNot />
           <hr className= "new-hr"/>
           <div>
-            <h4 className="category-list-header">Recipe Categories and Cats!</h4>
+            <h4 className="category-list-header">Recipe Categories</h4>
           </div>
           {this.state.categories.map((category) => {
             return (
               <div className = "col-md-4 category_box">
-                <Link to={`/${category.category_name}`}>
+                <Link to={`/${category.id}`}>
                   <img className = "cat-image" src={`${category.image_url}`}/>
                   <h4 className="cat-header">{category.category_name}</h4>
                 </Link>

@@ -47,4 +47,14 @@ const categories = [
 
 ]
 
+recipe_id: '',
+category_name: '',
+category_id: '',
+recipe_name: '',
+chef_name: '',
+recipe_image_url: '',
+recipe_ingredients: '',
+recipe_method: '',
+recipe_comments: ''})
+
 export default categories

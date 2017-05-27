@@ -38,6 +38,16 @@ router.get('/recipes/:recipe_id', (req, res) => {
     })
 })
 
+router.post('/add_recipe', (req, res) => {
+  db.addRecipe(req.body, req.app.get('knex'))
+  .then((result) => {
+    res.status(201).send(req.body)
+  })
+  .catch(function (err){
+    res.status(500).send('DATABASE ERROR: ' + err.message)
+  })
+})
+
 
 
 module.exports = router
