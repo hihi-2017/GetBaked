@@ -18,7 +18,7 @@ const App = () => {
            <Route exact path="/" component={Home} />
            <Route exact path='/:id' component={Recipe_List} />
            <Route exact path='/:id/:recipe_id' component={Show_Recipe} />
-           <Route exact path='/add_recipe' component={Add_Recipe} />
+           <Route exact path='/categories/add_recipe' component={Add_Recipe} />
         </div>
         <hr/>
         <h5 className ="footer"> Copyright &copy; Dueweke Codes {'2017'} </h5>
