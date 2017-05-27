@@ -7,7 +7,7 @@ import * as api from '../api'
 export default class Show_Recipe extends React.Component {
   constructor(props){
     super(props)
-
+    console.log(props);
     this.state = {
       recipe_id: props.match.params.recipe_id,
       recipes: []

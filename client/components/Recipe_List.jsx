@@ -8,9 +8,10 @@ export default class Recipe_List extends React.Component {
 
   constructor(props){
     super(props)
+    console.log(props);
 
     this.state = {
-      category_name: props.match.params.category_name,
+      category_id: props.match.params.id,
       recipes: []
     }
   }
@@ -36,7 +37,7 @@ export default class Recipe_List extends React.Component {
           <h2 className = 'recipe-list-header'>{this.state.category_name}</h2>
             <hr/>
             {this.state.recipes.filter(recipe => {
-              return recipe.category_name === this.state.category_name
+              return recipe.category_id === this.state.category_id
               }).map((item, key) => {
               return (
                 <div className = 'col-md-3'>

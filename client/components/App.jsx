@@ -16,8 +16,8 @@ const App = () => {
         <Nav />
         <div className="container">
            <Route exact path="/" component={Home} />
-           <Route exact path='/:category_name' component={Recipe_List} />
-           <Route exact path='/:category_name/:recipe_id' component={Show_Recipe} />
+           <Route exact path='/:id' component={Recipe_List} />
+           <Route exact path='/:id/:recipe_id' component={Show_Recipe} />
            <Route exact path='/add_recipe' component={Add_Recipe} />
         </div>
         <hr/>

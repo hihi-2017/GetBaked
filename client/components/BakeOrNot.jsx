@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 
 
 const BakeOrNot = () => {
+
   return (
     <div className="row bake-or-not">
       <div className="col-md-5 to-bake">
@@ -11,8 +12,10 @@ const BakeOrNot = () => {
       </div>
       <div className="col-md-2"></div>
       <div className="col-md-5 not-to-bake">
-        <h3>I didn't come here to bake.</h3>
+        <Link to = {`/${(Math.floor(Math.random() * 8) + 2201)}`}>
+          <h3>I didn't come here to bake.</h3>
           <h4><span>I came here to </span><span className="underline">EAT.</span></h4>
+        </Link>
       </div>
     </div>
 )}

@@ -43,7 +43,7 @@ export default class Home extends React.Component {
           {this.state.categories.map((category) => {
             return (
               <div className = "col-md-4 category_box">
-                <Link to={`/${category.category_name}`}>
+                <Link to={`/${category.id}`}>
                   <img className = "cat-image" src={`${category.image_url}`}/>
                   <h4 className="cat-header">{category.category_name}</h4>
                 </Link>
