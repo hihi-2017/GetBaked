@@ -23,6 +23,7 @@ function getRecipe(recipe_id, connection) {
   return connection('recipes').where('recipe_id', recipe_id).first()
 }
 
-function addRecipe() {
-
+function addRecipe(recipe, connection){
+  return connection('recipes')
+  .insert(recipe)
 }

@@ -57,3 +57,24 @@ test.serial('GET /recipes/:recipe_id', t => {
       console.log(err.message);
     })
 })
+
+test.serial('POST /categories/add_recipe', (t) =>{
+  const newRecipe= {
+    recipe_name: "Recipe",
+    recipe_ingredients: "Food"
+  }
+
+  return request(app)
+    .post('/categories/add_recipe')
+    .send(newRecipe, app.get('knex'))
+    .expect(201)
+    .then(()=> {
+      return app.get('knex')('recipes').select()
+    })
+    .then((recipes) => {
+      return new Promise((resolve, reject) => {
+        t.is(recipes.length, 4)
+        resolve()
+      })
+    })
+  })

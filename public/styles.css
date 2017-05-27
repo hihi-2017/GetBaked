@@ -116,6 +116,16 @@ a, a:link, a:visited, a:after {
   margin-top: 1.2em;
 }
 
+.to-bake a, .not-to-bake a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.to-bake a:hover, .not-to-bake a:hover {
+    color: #ff89d2;
+    text-decoration: none;
+}
+
 .underline {
   text-decoration: underline;
 }
