@@ -7,11 +7,10 @@ import * as api from '../../client/api'
 test.cb('api.getCategories', t => {
   let scope = nock('http://localhost:80')
     .get('/categories')
-    .reply(200, {message: 'test categories'})
+    .reply(200)
 
-  api.getCategories((actual) => {
+  api.getCategories(() => {
     scope.done()
-    console.log(actual)
     t.is(actual.message, 'test categories')
     t.end()
   })
