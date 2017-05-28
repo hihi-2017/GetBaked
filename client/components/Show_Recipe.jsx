@@ -19,7 +19,7 @@ export default class Show_Recipe extends React.Component {
   }
 
   getRecipeList() {
-    api.getRecipes((error, recipes)=>{
+    api.getRecipes((recipes, error)=>{
       if(error) {
         console.log(error);
       } else {

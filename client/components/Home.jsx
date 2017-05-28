@@ -17,7 +17,7 @@ export default class Home extends React.Component {
   }
 
   getCategoryList() {
-    api.getCategories((error, categories) => {
+    api.getCategories((categories, error) => {
       if(error) {
         console.log(error);
       } else {
@@ -31,7 +31,7 @@ export default class Home extends React.Component {
       return (
         <div className="row category_list">
           <div className="home-banner col-md-12">
-            <Link to='/Cakes%20and%20Tortes/1'>
+            <Link to='/2201/1'>
               <h3 className="banner-content">RECIPE OF THE WEEK</h3>
             </Link>
           </div>

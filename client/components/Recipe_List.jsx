@@ -21,7 +21,7 @@ export default class Recipe_List extends React.Component {
   }
 
   getRecipeList() {
-    api.getRecipes((error, recipes)=>{
+    api.getRecipes((recipes, error)=>{
       if(error) {
         console.log(error);
       } else {

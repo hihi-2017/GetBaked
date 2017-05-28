@@ -25,7 +25,6 @@ export default class Add_Recipe extends React.Component {
   handleChange(e) {
     let recipe = this.state.recipe
     recipe[e.target.name] = e.target.value
-    console.log(e.target.name);
     this.setState({recipe})
   }
 
@@ -45,24 +44,32 @@ export default class Add_Recipe extends React.Component {
         <div className= "recipe-form">
 
           <form onSubmit={(e) => this.handleSubmit(e)}>
-            <select class="drop-menu" name="category_id" value={this.state.category_name} onChange={(e =>this.handleChange(e))}>
-               <option value="Cakes and Tortes">Cakes and Tortes</option>
-               <option value="Pies, Crumbles, and Tarts">Pies, Crumbles, and Tarts</option>
-               <option value="Cookies and Bars">Cookies and Bars</option>
-               <option value="Custard, Mousse, and Pudding">Custard, Mousse, and Pudding</option>
-               <option value="Candy and Confectioneries">Candy and Confectioneries</option>
-               <option value="Bread">Bread</option>
-               <option value="Muffins and Breakfast Pastries">Muffins and Breakfast Pastries</option>
-               <option value="Ice Cream and Frozen Desserts">Ice Cream and Frozen Desserts</option>
-               <option value="Frosting, Glazes, and Sauces">Frosting, Glazes, and Sauces</option>
-           </select>
-            <input type='text' placeholder="Recipe Name" name='recipe_name' value={this.state.recipe_name} onChange={(e =>this.handleChange(e))} />
-            <input type='text' placeholder="Chef's Name" name='chef_name' value={this.state.chef_name} onChange={(e =>this.handleChange(e))} />
-            <input type='text' placeholder="Recipe Image URL" name='recipe_image_url' value={this.state.recipe_image_url} onChange={(e =>this.handleChange(e))}/>
-            <textarea placeholder="Ingredients" name='recipe_ingredients' value={this.state.recipe_ingredients} onChange={(e =>this.handleChange(e))} />
-            <textarea placeholder="Recipe Method" name='recipe_method' value={this.state.recipe_method} onChange={(e =>this.handleChange(e))} />
-            <textarea placeholder="Recipe Comments" name='recipe_comments' value={this.state.recipe_comment} onChange={(e) => this.handleChange(e)} />
-            <input type='submit' value='save' />
+            <label>Select Recipe Category</label>
+            <p>
+              <select class="drop-menu" name="category_id" value={this.state.category_name} onChange={(e =>this.handleChange(e))}>
+                 <option value="Cakes and Tortes">Cakes and Tortes</option>
+                 <option value="Pies, Crumbles, and Tarts">Pies, Crumbles, and Tarts</option>
+                 <option value="Cookies and Bars">Cookies and Bars</option>
+                 <option value="Custard, Mousse, and Pudding">Custard, Mousse, and Pudding</option>
+                 <option value="Candy and Confectioneries">Candy and Confectioneries</option>
+                 <option value="Bread">Bread</option>
+                 <option value="Muffins and Breakfast Pastries">Muffins and Breakfast Pastries</option>
+                 <option value="Ice Cream and Frozen Desserts">Ice Cream and Frozen Desserts</option>
+                 <option value="Frosting, Glazes, and Sauces">Frosting, Glazes, and Sauces</option>
+             </select>
+            </p>
+            <label>Recipe Name</label>
+              <input type='text' name='recipe_name' value={this.state.recipe_name} onChange={(e =>this.handleChange(e))} />
+            <label>Chef's Name</label>
+              <input type='text' name='chef_name' value={this.state.chef_name} onChange={(e =>this.handleChange(e))} />
+            <label>Recipe Image URL</label>                <input type='text' name='recipe_image_url' value={this.state.recipe_image_url} onChange={(e =>this.handleChange(e))}/>
+            <label>Ingredients</label>
+              <textarea name='recipe_ingredients' value={this.state.recipe_ingredients} onChange={(e =>this.handleChange(e))} />
+            <label>Recipe Method</label>
+              <textarea name='recipe_method' value={this.state.recipe_method} onChange={(e =>this.handleChange(e))} />
+            <label>Comments</label>
+              <textarea name='recipe_comments' value={this.state.recipe_comment} onChange={(e) => this.handleChange(e)} />
+              <input type='submit' value='submit' />
           </form>
 
 

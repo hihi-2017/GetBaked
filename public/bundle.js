@@ -3756,13 +3756,13 @@ module.exports = {
 
 function getCategories(callback) {
   _superagent2.default.get('/categories').end(function (err, res) {
-    callback(null, res.body);
+    err ? callback(err) : callback(res.body);
   });
 }
 
 function getRecipes(callback) {
   _superagent2.default.get('/categories/recipes').end(function (err, res) {
-    callback(null, res.body);
+    err ? callback(err) : callback(res.body);
   });
 }
 
@@ -11143,7 +11143,7 @@ var App = function App() {
         _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Home2.default }),
         _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/:id', component: _Recipe_List2.default }),
         _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/:id/:recipe_id', component: _Show_Recipe2.default }),
-        _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/categories/add_recipe', component: _Add_Recipe2.default })
+        _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/recipe/add_recipe', component: _Add_Recipe2.default })
       ),
       _react2.default.createElement('hr', null),
       _react2.default.createElement(
@@ -11231,7 +11231,6 @@ var Add_Recipe = function (_React$Component) {
     value: function handleChange(e) {
       var recipe = this.state.recipe;
       recipe[e.target.name] = e.target.value;
-      console.log(e.target.name);
       this.setState({ recipe: recipe });
     }
   }, {
@@ -11265,75 +11264,115 @@ var Add_Recipe = function (_React$Component) {
                 return _this2.handleSubmit(e);
               } },
             _react2.default.createElement(
-              'select',
-              { 'class': 'drop-menu', name: 'category_id', value: this.state.category_name, onChange: function onChange(e) {
-                  return _this2.handleChange(e);
-                } },
+              'label',
+              null,
+              'Select Recipe Category'
+            ),
+            _react2.default.createElement(
+              'p',
+              null,
               _react2.default.createElement(
-                'option',
-                { value: 'Cakes and Tortes' },
-                'Cakes and Tortes'
-              ),
-              _react2.default.createElement(
-                'option',
-                { value: 'Pies, Crumbles, and Tarts' },
-                'Pies, Crumbles, and Tarts'
-              ),
-              _react2.default.createElement(
-                'option',
-                { value: 'Cookies and Bars' },
-                'Cookies and Bars'
-              ),
-              _react2.default.createElement(
-                'option',
-                { value: 'Custard, Mousse, and Pudding' },
-                'Custard, Mousse, and Pudding'
-              ),
-              _react2.default.createElement(
-                'option',
-                { value: 'Candy and Confectioneries' },
-                'Candy and Confectioneries'
-              ),
-              _react2.default.createElement(
-                'option',
-                { value: 'Bread' },
-                'Bread'
-              ),
-              _react2.default.createElement(
-                'option',
-                { value: 'Muffins and Breakfast Pastries' },
-                'Muffins and Breakfast Pastries'
-              ),
-              _react2.default.createElement(
-                'option',
-                { value: 'Ice Cream and Frozen Desserts' },
-                'Ice Cream and Frozen Desserts'
-              ),
-              _react2.default.createElement(
-                'option',
-                { value: 'Frosting, Glazes, and Sauces' },
-                'Frosting, Glazes, and Sauces'
+                'select',
+                { 'class': 'drop-menu', name: 'category_id', value: this.state.category_name, onChange: function onChange(e) {
+                    return _this2.handleChange(e);
+                  } },
+                _react2.default.createElement(
+                  'option',
+                  { value: 'Cakes and Tortes' },
+                  'Cakes and Tortes'
+                ),
+                _react2.default.createElement(
+                  'option',
+                  { value: 'Pies, Crumbles, and Tarts' },
+                  'Pies, Crumbles, and Tarts'
+                ),
+                _react2.default.createElement(
+                  'option',
+                  { value: 'Cookies and Bars' },
+                  'Cookies and Bars'
+                ),
+                _react2.default.createElement(
+                  'option',
+                  { value: 'Custard, Mousse, and Pudding' },
+                  'Custard, Mousse, and Pudding'
+                ),
+                _react2.default.createElement(
+                  'option',
+                  { value: 'Candy and Confectioneries' },
+                  'Candy and Confectioneries'
+                ),
+                _react2.default.createElement(
+                  'option',
+                  { value: 'Bread' },
+                  'Bread'
+                ),
+                _react2.default.createElement(
+                  'option',
+                  { value: 'Muffins and Breakfast Pastries' },
+                  'Muffins and Breakfast Pastries'
+                ),
+                _react2.default.createElement(
+                  'option',
+                  { value: 'Ice Cream and Frozen Desserts' },
+                  'Ice Cream and Frozen Desserts'
+                ),
+                _react2.default.createElement(
+                  'option',
+                  { value: 'Frosting, Glazes, and Sauces' },
+                  'Frosting, Glazes, and Sauces'
+                )
               )
             ),
-            _react2.default.createElement('input', { type: 'text', placeholder: 'Recipe Name', name: 'recipe_name', value: this.state.recipe_name, onChange: function onChange(e) {
+            _react2.default.createElement(
+              'label',
+              null,
+              'Recipe Name'
+            ),
+            _react2.default.createElement('input', { type: 'text', name: 'recipe_name', value: this.state.recipe_name, onChange: function onChange(e) {
                 return _this2.handleChange(e);
               } }),
-            _react2.default.createElement('input', { type: 'text', placeholder: 'Chef\'s Name', name: 'chef_name', value: this.state.chef_name, onChange: function onChange(e) {
+            _react2.default.createElement(
+              'label',
+              null,
+              'Chef\'s Name'
+            ),
+            _react2.default.createElement('input', { type: 'text', name: 'chef_name', value: this.state.chef_name, onChange: function onChange(e) {
                 return _this2.handleChange(e);
               } }),
-            _react2.default.createElement('input', { type: 'text', placeholder: 'Recipe Image URL', name: 'recipe_image_url', value: this.state.recipe_image_url, onChange: function onChange(e) {
+            _react2.default.createElement(
+              'label',
+              null,
+              'Recipe Image URL'
+            ),
+            '                ',
+            _react2.default.createElement('input', { type: 'text', name: 'recipe_image_url', value: this.state.recipe_image_url, onChange: function onChange(e) {
                 return _this2.handleChange(e);
               } }),
-            _react2.default.createElement('textarea', { placeholder: 'Ingredients', name: 'recipe_ingredients', value: this.state.recipe_ingredients, onChange: function onChange(e) {
+            _react2.default.createElement(
+              'label',
+              null,
+              'Ingredients'
+            ),
+            _react2.default.createElement('textarea', { name: 'recipe_ingredients', value: this.state.recipe_ingredients, onChange: function onChange(e) {
                 return _this2.handleChange(e);
               } }),
-            _react2.default.createElement('textarea', { placeholder: 'Recipe Method', name: 'recipe_method', value: this.state.recipe_method, onChange: function onChange(e) {
+            _react2.default.createElement(
+              'label',
+              null,
+              'Recipe Method'
+            ),
+            _react2.default.createElement('textarea', { name: 'recipe_method', value: this.state.recipe_method, onChange: function onChange(e) {
                 return _this2.handleChange(e);
               } }),
-            _react2.default.createElement('textarea', { placeholder: 'Recipe Comments', name: 'recipe_comments', value: this.state.recipe_comment, onChange: function onChange(e) {
+            _react2.default.createElement(
+              'label',
+              null,
+              'Comments'
+            ),
+            _react2.default.createElement('textarea', { name: 'recipe_comments', value: this.state.recipe_comment, onChange: function onChange(e) {
                 return _this2.handleChange(e);
               } }),
-            _react2.default.createElement('input', { type: 'submit', value: 'save' })
+            _react2.default.createElement('input', { type: 'submit', value: 'submit' })
           )
         )
       );
@@ -11477,7 +11516,7 @@ var Home = function (_React$Component) {
     value: function getCategoryList() {
       var _this2 = this;
 
-      api.getCategories(function (error, categories) {
+      api.getCategories(function (categories, error) {
         if (error) {
           console.log(error);
         } else {
@@ -11496,7 +11535,7 @@ var Home = function (_React$Component) {
           { className: 'home-banner col-md-12' },
           _react2.default.createElement(
             _reactRouterDom.Link,
-            { to: '/Cakes%20and%20Tortes/1' },
+            { to: '/2201/1' },
             _react2.default.createElement(
               'h3',
               { className: 'banner-content' },
@@ -11575,7 +11614,7 @@ var Nav = function Nav() {
         ),
         _react2.default.createElement(
             _reactRouterDom.Link,
-            { to: '/categories/add_recipe' },
+            { to: '/recipe/add_recipe' },
             'Add a Recipe!'
         ),
         _react2.default.createElement(
@@ -11648,7 +11687,7 @@ var Recipe_List = function (_React$Component) {
     value: function getRecipeList() {
       var _this2 = this;
 
-      api.getRecipes(function (error, recipes) {
+      api.getRecipes(function (recipes, error) {
         if (error) {
           console.log(error);
         } else {
@@ -11756,7 +11795,7 @@ var Show_Recipe = function (_React$Component) {
     value: function getRecipeList() {
       var _this2 = this;
 
-      api.getRecipes(function (error, recipes) {
+      api.getRecipes(function (recipes, error) {
         if (error) {
           console.log(error);
         } else {
