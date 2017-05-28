@@ -40,7 +40,7 @@ router.get('/recipes/:recipe_id', (req, res) => {
 })
 
 
-router.post('/recipes/add', (req, res) => {
+router.post('/add_recipe', (req, res) => {
   db.addRecipe(req.body, req.app.get('knex'))
   .then(() => {
     res.sendStatus(201)

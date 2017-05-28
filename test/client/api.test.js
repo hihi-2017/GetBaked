@@ -16,16 +16,15 @@ test.cb('api.getCategories', t => {
   })
 })
 
-//
-// test.cb('api.getRecipes', t => {
-//   let scope = nock('http://localhost:80')
-//     .get('/categories/recipes')
-//     .reply(200, {message: 'test recipes'})
-//
-//   api.getRecipes((actual) => {
-//     scope.done()
-//     console.log(actual)
-//     t.is(actual.message, 'test recipes')
-//     t.end()
-//   })
-// })
+
+test.cb('api.getRecipes', t => {
+  let scope = nock('http://localhost:80')
+    .get('/categories/recipes')
+    .reply(200, {message: 'recipes route working'})
+
+  api.getRecipes((actual) => {
+    scope.done()
+    t.is(actual.message, 'recipes route working')
+    t.end()
+  })
+})

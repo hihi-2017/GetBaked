@@ -65,7 +65,7 @@ test.serial('POST /categories/add_recipe', (t) =>{
   }
 
   return request(app)
-    .post('/recipes')
+    .post('/categories/add_recipe')
     .send(newRecipe, app.get('knex'))
     .expect(201)
     .then(()=> {
