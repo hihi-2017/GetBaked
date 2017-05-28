@@ -18,14 +18,15 @@ router.get('/recipes', (req, res) => {
     })
 })
 
+
 router.get('/:id', (req, res) => {
   db.getCategory(req.params.id, req.app.get('knex'))
-    .then((result) => {
-      res.status(200).json(result)
-    })
-    .catch(function(err){
-      res.status(500).send('DATABASE ERROR ' + err.message)
-    })
+  .then((result) => {
+    res.status(200).json(result)
+  })
+  .catch(function(err){
+    res.status(500).send('DATABASE ERROR ' + err.message)
+  })
 })
 
 router.get('/recipes/:recipe_id', (req, res) => {
@@ -38,16 +39,16 @@ router.get('/recipes/:recipe_id', (req, res) => {
     })
 })
 
-router.post('/add_recipe', (req, res) => {
+
+router.post('/recipes/add', (req, res) => {
   db.addRecipe(req.body, req.app.get('knex'))
-  .then((result) => {
-    res.status(201).send(req.body)
+  .then(() => {
+    res.sendStatus(201)
   })
-  .catch(function (err){
+  .catch((err) => {
     res.status(500).send('DATABASE ERROR: ' + err.message)
   })
 })
-
 
 
 module.exports = router

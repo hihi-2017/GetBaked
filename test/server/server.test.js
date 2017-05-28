@@ -27,7 +27,7 @@ test.serial("GET /recipes returns a list of recipes", t => {
     .get('/categories/recipes')
     .expect(200)
     .then((res) => {
-      t.is(res.body.length, 3)
+      t.is(res.body.length, 5)
     })
     .catch((err) => {
       console.log(err.message)
@@ -65,7 +65,7 @@ test.serial('POST /categories/add_recipe', (t) =>{
   }
 
   return request(app)
-    .post('/categories/add_recipe')
+    .post('/recipes')
     .send(newRecipe, app.get('knex'))
     .expect(201)
     .then(()=> {
@@ -73,7 +73,7 @@ test.serial('POST /categories/add_recipe', (t) =>{
     })
     .then((recipes) => {
       return new Promise((resolve, reject) => {
-        t.is(recipes.length, 4)
+        t.is(recipes.length, 6)
         resolve()
       })
     })

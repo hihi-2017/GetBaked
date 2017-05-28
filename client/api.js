@@ -3,7 +3,7 @@ import request from 'superagent'
 module.exports = {
   getCategories,
   getRecipes,
-  saveRecipe
+  addNewRecipe
 }
 
 
@@ -23,15 +23,11 @@ function getRecipes(callback) {
     })
 }
 
-function saveRecipe (recipe, callback) {
+function addNewRecipe (newRecipe, callback) {
   request
     .post('/categories/add_recipe')
-    .send(recipe)
-    .end(function (err, res) {
-      if (err) {
-        callback(err)
-      } else {
-        callback(null)
-      }
+    .send(newRecipe)
+    .end((err, res) => {
+      (err) ? callback(err) : callback(res.body)
     })
-}
+  }
