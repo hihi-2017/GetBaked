@@ -11,7 +11,7 @@ function getCategories(callback) {
   request
     .get('/categories')
     .end((err, res) => {
-      callback(null, res.body)
+      err ? callback(err) : callback(res.body)
     })
   }
 
@@ -19,7 +19,7 @@ function getRecipes(callback) {
   request
     .get('/categories/recipes')
     .end((err, res) => {
-      callback(null, res.body)
+      err ? callback(err) : callback(res.body)
     })
 }
 
@@ -28,6 +28,6 @@ function addNewRecipe (newRecipe, callback) {
     .post('/categories/add_recipe')
     .send(newRecipe)
     .end((err, res) => {
-      (err) ? callback(err) : callback(res.body)
+      err ? callback(err) : callback(res.body)
     })
   }
