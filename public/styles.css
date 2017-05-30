@@ -3,8 +3,9 @@ body {
   padding: 0px;
 }
 
-a, a:link, a:visited, a:after {
+a, a:link, a:visited, a:after, a:focus {
   text-decoration: none !important;
+  color: #fff;
 }
 
 .main-body {
@@ -71,7 +72,7 @@ a, a:link, a:visited, a:after {
   opacity: 0.5;
 }
 
-.navbar a:visited, a:after, a:active, {
+.navbar a:visited, a:after, a:active, a:focus {
   color: #fff;
   text-decoration: none;
 }
