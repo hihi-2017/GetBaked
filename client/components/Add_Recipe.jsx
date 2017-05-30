@@ -9,30 +9,38 @@ export default class Add_Recipe extends React.Component {
     super(props)
     this.state = {
       recipe: {
-        recipe_id: '',
-        category_name: '',
-        category_id: '',
-        recipe_name: '',
-        chef_name: '',
-        recipe_image_url: '',
-        recipe_ingredients: '',
-        recipe_method: '',
-        recipe_comments: ''
+        category_name: null,
+        category_id: null,
+        recipe_name: null,
+        chef_name: null,
+        recipe_image_url: null,
+        recipe_ingredients: null,
+        recipe_method: null,
+        recipe_comments: null
       }
     }
   }
 
+  validateForm(){
+    for (var key in this.state.recipe) {
+      if (this.state.recipe[key] == null) return false
+    }
+    return true
+  }
+
   handleChange(e) {
     let recipe = this.state.recipe
+    recipe.category_id = 2201
     recipe[e.target.name] = e.target.value
     this.setState({recipe})
   }
 
   handleSubmit(e) {
     e.preventDefault()
-    api.addNewRecipe(this.state.recipe, (err) => {
+    if (this.validateForm()) api.addNewRecipe(this.state.recipe, (err) => {
       if (!err) console.log("recipe added");
     })
+    else alert('Please fill in all required fields')
     console.log(this.state.recipe);
   }
 

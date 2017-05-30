@@ -41,12 +41,14 @@ router.get('/recipes/:recipe_id', (req, res) => {
 
 
 router.post('/add_recipe', (req, res) => {
-  console.log(req.body);
+  console.log("this is the start of the route",req.body)
   db.addRecipe(req.body, req.app.get('knex'))
-  .then(() => {
+  .then((result) => {
+    console.log("gots me a results cuz",{result});
     res.sendStatus(201)
   })
   .catch((err) => {
+    console.log({err});
     res.status(500).send('DATABASE ERROR: ' + err.message)
   })
 })

@@ -3136,6 +3136,7 @@ function getRecipes(callback) {
 
 function addNewRecipe(newRecipe, callback) {
   _superagent2.default.post('/categories/add_recipe').send(newRecipe).end(function (err, res) {
+    console.log({ err: err, res: res });
     err ? callback(err) : callback(null);
   });
 }
@@ -11217,24 +11218,32 @@ var Add_Recipe = function (_React$Component) {
 
     _this.state = {
       recipe: {
-        recipe_id: '',
-        category_name: '',
-        category_id: '',
-        recipe_name: '',
-        chef_name: '',
-        recipe_image_url: '',
-        recipe_ingredients: '',
-        recipe_method: '',
-        recipe_comments: ''
+        category_name: null,
+        category_id: null,
+        recipe_name: null,
+        chef_name: null,
+        recipe_image_url: null,
+        recipe_ingredients: null,
+        recipe_method: null,
+        recipe_comments: null
       }
     };
     return _this;
   }
 
   _createClass(Add_Recipe, [{
+    key: 'validateForm',
+    value: function validateForm() {
+      for (var key in this.state.recipe) {
+        if (this.state.recipe[key] == null) return false;
+      }
+      return true;
+    }
+  }, {
     key: 'handleChange',
     value: function handleChange(e) {
       var recipe = this.state.recipe;
+      recipe.category_id = 2201;
       recipe[e.target.name] = e.target.value;
       this.setState({ recipe: recipe });
     }
@@ -11242,9 +11251,9 @@ var Add_Recipe = function (_React$Component) {
     key: 'handleSubmit',
     value: function handleSubmit(e) {
       e.preventDefault();
-      api.addNewRecipe(this.state.recipe, function (err) {
+      if (this.validateForm()) api.addNewRecipe(this.state.recipe, function (err) {
         if (!err) console.log("recipe added");
-      });
+      });else alert('Please fill in all required fields');
       console.log(this.state.recipe);
     }
   }, {

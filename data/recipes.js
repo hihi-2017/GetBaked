@@ -100,7 +100,68 @@ const recipes = [
       recipe_ingredients: "Ice cream",
       recipe_method: "Make ice cream",
       recipe_comments: "it's creamy and sandwich-y"
+    },
+    { recipe_id: 99911,
+      category_name: 'Cookies and Bars',
+      category_id: 2204,
+      recipe_name: 'Peanutbutter Cookies',
+      chef_name: 'Mr. Peanut',
+      recipe_image_url: "http://relish.com/wp-content/uploads/2011/07/24894_peanut_butter_cookie-670x405.jpg",
+      recipe_ingredients: "Cookies",
+      recipe_method: "Make cookies",
+      recipe_comments: "it's cookies"
+    },
+    { recipe_id: 99912,
+      category_name: 'Cookies and Bars',
+      category_id: 2204,
+      recipe_name: 'Raspberry Crumble Bars',
+      chef_name: 'Mr. Raspberry',
+      recipe_image_url: "http://assets.epicurious.com/photos/55ac4e7398d8666b6dcdac5a/master/pass/EP_15072015_BARCOOKIE_strawberrybuckweatbars_6x4.jpg",
+      recipe_ingredients: "Cookies",
+      recipe_method: "Make cookies",
+      recipe_comments: "it's cookies"
+    },
+    { recipe_id: 99913,
+      category_name: 'Cookies and Bars',
+      category_id: 2204,
+      recipe_name: 'Raspberry Champagne Macarons',
+      chef_name: 'Frenchy McFrenchface',
+      recipe_image_url: "https://static1.squarespace.com/static/56315ccee4b068a9afd70559/t/56b94c4eb09f955797c21fef/1454984283286/Raspberry+Macarons",
+      recipe_ingredients: "Cookies",
+      recipe_method: "Make cookies",
+      recipe_comments: "it's cookies"
+    },
+    { recipe_id: 99914,
+      category_name: 'Bread',
+      category_id: 2202,
+      recipe_name: 'Classic Brioche',
+      chef_name: "Dr. Bread",
+      recipe_image_url: "http://ichef.bbci.co.uk/food/ic/food_16x9_448/recipes/brioches__ttes_39328_16x9.jpg",
+      recipe_ingredients: "Bread",
+      recipe_method: "Make bread",
+      recipe_comments: "it's bread"
+    },
+    { recipe_id: 99915,
+      category_name: 'Bread',
+      category_id: 2202,
+      recipe_name: 'Farmhouse Bread',
+      chef_name: "Dr. Bread",
+      recipe_image_url: "https://s-media-cache-ak0.pinimg.com/736x/35/f5/4a/35f54a72b2d52285299c70f4a3ed5708.jpg",
+      recipe_ingredients: "Bread",
+      recipe_method: "Make bread",
+      recipe_comments: "it's bread"
+    },
+    { recipe_id: 99916,
+      category_name: 'Bread',
+      category_id: 2202,
+      recipe_name: 'Bread',
+      chef_name: "Dr. Bread",
+      recipe_image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnUDAzKLRLbzB1zeiZk2LPgIBuIwrI_zcIWuvip_5YZY-I9ypq",
+      recipe_ingredients: "Bread",
+      recipe_method: "Make bread",
+      recipe_comments: "it's bread"
     }
+
   ]
 
 export default recipes
