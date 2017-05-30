@@ -3,8 +3,9 @@ body {
   padding: 0px;
 }
 
-a, a:link, a:visited, a:after {
+a, a:link, a:visited, a:after, a:focus {
   text-decoration: none !important;
+  color: #fff;
 }
 
 .main-body {
@@ -71,7 +72,7 @@ a, a:link, a:visited, a:after {
   opacity: 0.5;
 }
 
-.navbar a:visited, a:after, a:active, {
+.navbar a:visited, a:after, a:active, a:focus {
   color: #fff;
   text-decoration: none;
 }
@@ -268,17 +269,23 @@ margin-top: 25px;
 
 
 /**** Add Recipe Form ****/
-
 .recipe-form {
-  display:flex;
-  margin: auto;
+  display: flex;
   justify-content: center;
+}
+
+.form-header {
+  font-family: "Bitter", "serif";
+  font-size: 48px;
+  text-align: center;
+  padding: 30px 0px;
+  margin: 20px 0px;
 }
 
 .recipe-form select {
   font-family: "Lato", "sans-serif";
   font-size: 18px;
-  width: 20em;
+  width: 30em;
   height: 2em;
 }
 
@@ -288,7 +295,7 @@ margin-top: 25px;
   margin: 15px 0px;
   font-family: "Lato", "sans-serif";
   font-size: 18px;
-  width: 20em;
+  width: 30em;
   height: 2em;
 }
 

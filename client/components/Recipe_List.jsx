@@ -21,7 +21,7 @@ export default class Recipe_List extends React.Component {
   }
 
   getRecipeList() {
-    api.getRecipes((error, recipes)=>{
+    api.getRecipes((recipes, error)=>{
       if(error) {
         console.log(error);
       } else {
@@ -41,8 +41,8 @@ export default class Recipe_List extends React.Component {
               }).map((item, key) => {
               return (
                 <div className = 'col-md-3'>
-                  <Link to={`${item.category_name}/${item.recipe_id}`}>
-                    <img className="recipe-list-image" src={item.recipe_image_url} />
+                  <Link to={`${item.category_id}/${item.recipe_id}`}>
+                    <img className= "recipe-list-image" src={item.recipe_image_url} />
                     <h3 className = 'recipe-list-title'>{item.recipe_name}</h3>
                   </Link>
                 </div>
