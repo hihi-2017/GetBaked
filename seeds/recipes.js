@@ -23,7 +23,7 @@ exports.seed = function (knex, Promise) {
         { recipe_id: 8, category_name: 'Pies, Crumbles, and Tarts',
           category_id: 2202, recipe_name: 'Raspberry Pie', chef_name: "Mrs. Pie Lady", recipe_image_url: "http://clv.h-cdn.co/assets/15/12/640x640/square-1426610944-138638408.jpg", recipe_ingredients: "Pie", recipe_method: "Make pie", recipe_comments: "it's pie" },
 
-        { recipe_id: 9, category_name: 'Cookies and Bars', category_id: 2203, recipe_name: 'Cookies', chef_name: "Mr.Cookerson", recipe_image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwGdPLQMjOo0AHKJbJ4q1Gaqm8Q6SVqLlAr6Qu0zjFLRj6MEMCfw",
+        { recipe_id: 9, category_name: 'Cookies and Bars', category_id: 2203, recipe_name: 'Chocolate Chip Cookies', chef_name: "Mr.Cookerson", recipe_image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwGdPLQMjOo0AHKJbJ4q1Gaqm8Q6SVqLlAr6Qu0zjFLRj6MEMCfw",
           recipe_ingredients: "Cookies", recipe_method: "Make cookies", recipe_comments: "it's cookies" },
 
         { recipe_id: 10, category_name: 'Custard, Mousse, and Pudding', category_id: 2204, recipe_name: 'Chocolate Mousse', chef_name: "Bullwinkle", recipe_image_url: "http://img.taste.com.au/I3x-cteh/taste/2010/01/chocolate_mousse_in_minutes_1980x1320-117905-1.jpg", recipe_ingredients: "Chocolate and mooses", recipe_method: "Make the mousse", recipe_comments: "it's moussey"},
@@ -61,7 +61,16 @@ exports.seed = function (knex, Promise) {
         },
 
         { recipe_id: 19, category_name: 'Bread', category_id: 2206, recipe_name: 'Farmhouse Bread', chef_name: "Dr. Bread", recipe_image_url: "https://s-media-cache-ak0.pinimg.com/736x/35/f5/4a/35f54a72b2d52285299c70f4a3ed5708.jpg", recipe_ingredients: "Bread", recipe_method: "Make bread", recipe_comments: "it's bread"
-        }
+        },
+
+        {recipe_id: 20, category_name:'Cakes and Tortes', category_id: 2201, recipe_name: 'Caramel Cheesecake', chef_name: 'Cake', recipe_image_url: 'http://www.cheriseharper.com/wp-content/uploads/CheeseCake_0019.jpg', recipe_ingredients: 'Cake', recipe_method:
+        'Directions: '},
+
+        {recipe_id: 21, category_name:'Cakes and Tortes', category_id: 2201, recipe_name: 'Funfetti Cake', chef_name: 'Cake', recipe_image_url: 'http://theglitterguide.com/wp-content/uploads/2016/02/static1.squarespace-e1455656673200.jpg', recipe_ingredients: 'Cake', recipe_method:
+        'Directions: '},
+
+        {recipe_id: 22, category_name:'Cakes and Tortes', category_id: 2201, recipe_name: 'Carrot Cake', chef_name: 'Cake', recipe_image_url: 'https://s-media-cache-ak0.pinimg.com/736x/15/9b/b6/159bb68fc66af879842cb66ac43c2741.jpg', recipe_ingredients: 'Cake', recipe_method:
+        'Directions: '},
 
       ]);
     });
