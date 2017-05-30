@@ -28,6 +28,6 @@ function addNewRecipe (newRecipe, callback) {
     .post('/categories/add_recipe')
     .send(newRecipe)
     .end((err, res) => {
-      err ? callback(err) : callback(res.body)
+      err ? callback(err) : callback(null)
     })
   }

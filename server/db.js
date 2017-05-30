@@ -24,6 +24,5 @@ function getRecipe(recipe_id, connection) {
 }
 
 function addRecipe(newRecipe, connection){
-  return connection('recipes')
-  .insert(newRecipe)
+  return connection('recipes').insert(newRecipe)
 }

@@ -7,7 +7,6 @@ import * as api from '../api'
 export default class Show_Recipe extends React.Component {
   constructor(props){
     super(props)
-    console.log(props);
     this.state = {
       recipe_id: props.match.params.recipe_id,
       recipes: []
@@ -29,7 +28,6 @@ export default class Show_Recipe extends React.Component {
   }
 
   render() {
-    console.log(this.state);
       return (
         <div className='recipe-list'>
             <hr/>

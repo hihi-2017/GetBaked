@@ -41,8 +41,9 @@ router.get('/recipes/:recipe_id', (req, res) => {
 
 
 router.post('/add_recipe', (req, res) => {
+  console.log(req.body);
   db.addRecipe(req.body, req.app.get('knex'))
-  .then((result) => {
+  .then(() => {
     res.sendStatus(201)
   })
   .catch((err) => {

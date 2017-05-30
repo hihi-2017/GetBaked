@@ -46,7 +46,7 @@ export default class Add_Recipe extends React.Component {
           <form onSubmit={(e) => this.handleSubmit(e)}>
             <label>Select Recipe Category</label>
             <p>
-              <select class="drop-menu" name="category_id" value={this.state.category_name} onChange={(e =>this.handleChange(e))}>
+              <select className="drop-menu" name="category_name" value={this.state.category_name} onChange={(e =>this.handleChange(e))}>
                  <option value="Cakes and Tortes">Cakes and Tortes</option>
                  <option value="Pies, Crumbles, and Tarts">Pies, Crumbles, and Tarts</option>
                  <option value="Cookies and Bars">Cookies and Bars</option>
