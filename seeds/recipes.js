@@ -28,102 +28,41 @@ exports.seed = function (knex, Promise) {
 
         { recipe_id: 10, category_name: 'Custard, Mousse, and Pudding', category_id: 2204, recipe_name: 'Chocolate Mousse', chef_name: "Bullwinkle", recipe_image_url: "http://img.taste.com.au/I3x-cteh/taste/2010/01/chocolate_mousse_in_minutes_1980x1320-117905-1.jpg", recipe_ingredients: "Chocolate and mooses", recipe_method: "Make the mousse", recipe_comments: "it's moussey"},
 
-        { recipe_id: 11, category_name: 'Muffins and Breakfast Pastries', category_id: 2207, recipe_name: 'Breakfast Pastry', chef_name: "Patty Pastry",
-          recipe_image_url: "http://i.huffpost.com/gen/1060168/images/o-BREAKFAST-PASTRIES-facebook.jpg",
-          recipe_ingredients: "Pastry",
+        { recipe_id: 11, category_name: 'Muffins and Breakfast Pastries', category_id: 2207, recipe_name: 'Pop Tarts!', chef_name: "Patty Pastry",
+          recipe_image_url: "http://c06352e9238d9d2a61cb-8a886d762570dee9ec4262596df361b5.r49.cf1.rackcdn.com/wp-content/uploads/cherry-pastries-horizontal-beauty.jpg", recipe_ingredients: "Pastry",
           recipe_method: "Make pastry",
           recipe_comments: "it's pastry"
         },
-        { recipe_id: 99908,
-          category_name: 'Ice Cream and Frozen Desserts',
-          category_id: 2208,
-          recipe_name: 'Ice Cream',
-          chef_name: "Ben and or Jerry",
-          recipe_image_url: "http://www.theprairiehomestead.com/wp-content/uploads/2015/08/blueberry-cheesecake-ice-cream-recipe.jpg",
-          recipe_ingredients: "Ice cream",
-          recipe_method: "Make ice cream",
-          recipe_comments: "it's creamy"
+        { recipe_id: 12,
+          category_name: 'Ice Cream and Frozen Desserts', category_id: 2208, recipe_name: 'Blueberry Ice Cream', chef_name: "Ben and or Jerry", recipe_image_url: "http://www.theprairiehomestead.com/wp-content/uploads/2015/08/blueberry-cheesecake-ice-cream-recipe.jpg", recipe_ingredients: "Ice cream", recipe_method: "Make ice cream", recipe_comments: "it's creamy"
         },
-        { recipe_id: 99909,
+        { recipe_id: 13,
           category_name: 'Frosting, Glazes, and Sauces',
-          category_id: 2209,
-          recipe_name: 'Chocolate Sauce',
-          chef_name: "Saucy McSaucerson",
-          recipe_image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN5rJXo52G1TQeewDXOXA-myaV-3BUtfGVO8LNDK7mK1k3wztp",
-          recipe_ingredients: "Chocolate",
-          recipe_method: "Make sauce",
-          recipe_comments: "it's saucy"
+          category_id: 2209, recipe_name: 'Chocolate Sauce', chef_name: "Saucy McSaucerson",
+          recipe_image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN5rJXo52G1TQeewDXOXA-myaV-3BUtfGVO8LNDK7mK1k3wztp", recipe_ingredients: "Chocolate", recipe_method: "Make sauce", recipe_comments: "it's saucy"
         },
-        { recipe_id: 99910,
-          category_name: 'Ice Cream and Frozen Desserts',
-          category_id: 2208,
-          recipe_name: 'Ice Cream Sandwiches',
-          chef_name: "Ice Cream Man",
-          recipe_image_url: "https://www.turkeyhill.com/images/ice-cream-recipes.jpg",
-          recipe_ingredients: "Ice cream",
-          recipe_method: "Make ice cream",
-          recipe_comments: "it's creamy and sandwich-y"
+
+        { recipe_id: 14, category_name: 'Ice Cream and Frozen Desserts', category_id: 2208, recipe_name: 'Ice Cream Sandwiches', chef_name: "Ice Cream Man", recipe_image_url: "https://www.turkeyhill.com/images/ice-cream-recipes.jpg", recipe_ingredients: "Ice cream", recipe_method: "Make ice cream", recipe_comments: "it's creamy and sandwich-y"
         },
-        { recipe_id: 99911,
-          category_name: 'Cookies and Bars',
-          category_id: 2204,
-          recipe_name: 'Peanutbutter Cookies',
-          chef_name: 'Mr. Peanut',
-          recipe_image_url: "http://relish.com/wp-content/uploads/2011/07/24894_peanut_butter_cookie-670x405.jpg",
-          recipe_ingredients: "Cookies",
-          recipe_method: "Make cookies",
-          recipe_comments: "it's cookies"
+
+        { recipe_id: 15, category_name: 'Cookies and Bars', category_id: 2203, recipe_name: 'Peanutbutter Cookies', chef_name: 'Mr. Peanut',
+          recipe_image_url: "http://relish.com/wp-content/uploads/2011/07/24894_peanut_butter_cookie-670x405.jpg", recipe_ingredients: "Cookies", recipe_method: "Make cookies", recipe_comments: "it's cookies"
         },
-        { recipe_id: 99912,
-          category_name: 'Cookies and Bars',
-          category_id: 2204,
-          recipe_name: 'Raspberry Crumble Bars',
-          chef_name: 'Mr. Raspberry',
-          recipe_image_url: "http://assets.epicurious.com/photos/55ac4e7398d8666b6dcdac5a/master/pass/EP_15072015_BARCOOKIE_strawberrybuckweatbars_6x4.jpg",
-          recipe_ingredients: "Cookies",
-          recipe_method: "Make cookies",
-          recipe_comments: "it's cookies"
+
+        { recipe_id: 16, category_name: 'Cookies and Bars', category_id: 2203, recipe_name: 'Raspberry Crumble Bars', chef_name: 'Mr. Raspberry', recipe_image_url: "http://assets.epicurious.com/photos/55ac4e7398d8666b6dcdac5a/master/pass/EP_15072015_BARCOOKIE_strawberrybuckweatbars_6x4.jpg", recipe_ingredients: "Cookies", recipe_method: "Make cookies", recipe_comments: "it's cookies"
         },
-        { recipe_id: 99913,
-          category_name: 'Cookies and Bars',
-          category_id: 2204,
-          recipe_name: 'Raspberry Champagne Macarons',
-          chef_name: 'Frenchy McFrenchface',
-          recipe_image_url: "https://static1.squarespace.com/static/56315ccee4b068a9afd70559/t/56b94c4eb09f955797c21fef/1454984283286/Raspberry+Macarons",
-          recipe_ingredients: "Cookies",
-          recipe_method: "Make cookies",
-          recipe_comments: "it's cookies"
+
+        { recipe_id: 17, category_name: 'Cookies and Bars', category_id: 2203, recipe_name: 'Raspberry Macarons', chef_name: 'Frenchy McFrenchface', recipe_image_url: "https://static1.squarespace.com/static/56315ccee4b068a9afd70559/t/56b94c4eb09f955797c21fef/1454984283286/Raspberry+Macarons", recipe_ingredients: "Cookies", recipe_method: "Make cookies", recipe_comments: "it's cookies"
         },
-        { recipe_id: 99914,
-          category_name: 'Bread',
-          category_id: 2202,
-          recipe_name: 'Classic Brioche',
-          chef_name: "Dr. Bread",
-          recipe_image_url: "http://ichef.bbci.co.uk/food/ic/food_16x9_448/recipes/brioches__ttes_39328_16x9.jpg",
-          recipe_ingredients: "Bread",
-          recipe_method: "Make bread",
-          recipe_comments: "it's bread"
+
+        { recipe_id: 18, category_name: 'Bread',
+          category_id: 2206, recipe_name: 'Classic Brioche', chef_name: "Dr. Bread",
+          recipe_image_url: "http://ichef.bbci.co.uk/food/ic/food_16x9_448/recipes/brioches__ttes_39328_16x9.jpg", recipe_ingredients: "Bread", recipe_method: "Make bread", recipe_comments: "it's bread"
         },
-        { recipe_id: 99915,
-          category_name: 'Bread',
-          category_id: 2202,
-          recipe_name: 'Farmhouse Bread',
-          chef_name: "Dr. Bread",
-          recipe_image_url: "https://s-media-cache-ak0.pinimg.com/736x/35/f5/4a/35f54a72b2d52285299c70f4a3ed5708.jpg",
-          recipe_ingredients: "Bread",
-          recipe_method: "Make bread",
-          recipe_comments: "it's bread"
-        },
-        { recipe_id: 99916,
-          category_name: 'Bread',
-          category_id: 2202,
-          recipe_name: 'Bread',
-          chef_name: "Dr. Bread",
-          recipe_image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnUDAzKLRLbzB1zeiZk2LPgIBuIwrI_zcIWuvip_5YZY-I9ypq",
-          recipe_ingredients: "Bread",
-          recipe_method: "Make bread",
-          recipe_comments: "it's bread"
+
+        { recipe_id: 19, category_name: 'Bread', category_id: 2206, recipe_name: 'Farmhouse Bread', chef_name: "Dr. Bread", recipe_image_url: "https://s-media-cache-ak0.pinimg.com/736x/35/f5/4a/35f54a72b2d52285299c70f4a3ed5708.jpg", recipe_ingredients: "Bread", recipe_method: "Make bread", recipe_comments: "it's bread"
         }
+
       ]);
     });
 };

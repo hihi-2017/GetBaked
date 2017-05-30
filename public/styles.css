@@ -17,6 +17,9 @@ a, a:link, a:visited, a:after, a:focus {
   margin: 6em 0em;
 }
 
+.recipe-row {
+  padding: 20px 0px;
+}
 
 /***** Header *****/
 

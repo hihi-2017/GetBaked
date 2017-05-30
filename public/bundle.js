@@ -11481,7 +11481,7 @@ var All_Recipes = function (_React$Component) {
         this.state.recipes.map(function (recipe) {
           return _react2.default.createElement(
             'div',
-            { className: 'col-md-3' },
+            { className: 'col-md-3 recipe-row' },
             _react2.default.createElement(
               _reactRouterDom.Link,
               { to: '/' + recipe.category_id + '/' + recipe.recipe_id },

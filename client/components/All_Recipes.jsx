@@ -28,13 +28,12 @@ export default class All_Recipes extends React.Component {
     render() {
       return (
         <div className="recipe-list">
-
           <div>
             <h4 className="category-list-header">All Recipes</h4>
           </div>
           {this.state.recipes.map((recipe) => {
             return (
-              <div className = "col-md-3">
+              <div className = "col-md-3 recipe-row">
                 <Link to={`/${recipe.category_id}/${recipe.recipe_id}`}>
                   <img className = "recipe-list-image" src={`${recipe.recipe_image_url}`}/>
                   <h4 className="recipe-list-title">{recipe.recipe_name}</h4>
