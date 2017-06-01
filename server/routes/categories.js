@@ -9,12 +9,23 @@ router.get('/', (req, res) => {
     .then((result) => {
       res.json(result)
     })
+    .catch((err) => {
+      console.log(err.message)
+      res.sendStatus(500)
+    })
 })
 
 router.get('/recipes', (req, res) => {
   db.getRecipes(req.app.get('knex'))
     .then((result) => {
       res.json(result)
+    })
+})
+
+router.get('/random-recipe', (req, res) => {
+  db.getRecipes(req.app.get('knex'))
+    .then((result) => {
+      //get random recipe from result array
     })
 })
 

@@ -3,7 +3,8 @@ import request from 'superagent'
 module.exports = {
   getCategories,
   getRecipes,
-  addNewRecipe
+  addNewRecipe,
+  getRecipe
 }
 
 
@@ -19,8 +20,12 @@ function getRecipes(callback) {
   request
     .get('/categories/recipes')
     .end((err, res) => {
-      err ? callback(err) : callback(res.body)
+      callback(err, res.body)
     })
+}
+
+function getRecipe (id, callback) {
+  //get individual recipe
 }
 
 function addNewRecipe (newRecipe, callback) {

@@ -18,11 +18,12 @@ export default class Show_Recipe extends React.Component {
   }
 
   getRecipeList() {
-    api.getRecipes((recipes, error)=>{
+    api.getRecipe(this.state.recipe_id, (recipes, error)=>{
       if(error) {
         console.log(error);
       } else {
-        this.setState({recipes})
+        this.setState({recipe})
+        //etc.
       }
     })
   }

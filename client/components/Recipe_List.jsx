@@ -32,13 +32,13 @@ export default class Recipe_List extends React.Component {
 
 
   render() {
+    let recipes = this.state.recipes.filter(recipe => recipe.category_id === this.state.category_id)
       return (
         <div className='recipe-list'>
           <h2 className = 'recipe-list-header'>{this.state.category_name}</h2>
             <hr/>
-            {this.state.recipes.filter(recipe => {
-              return recipe.category_id === this.state.category_id
-              }).map((item, key) => {
+            { recipes..map((item, key) => {
+              //make a recipe component
               return (
                 <div className = 'col-md-3'>
                   <Link to={`${item.category_id}/${item.recipe_id}`}>
